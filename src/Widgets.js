@@ -1,7 +1,7 @@
 import React from 'react';
 import './Widgets.css';
 import SearchIcon from '@material-ui/icons/Search';
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import { TwitterTimelineEmbed, TwitterTweetEmbed } from 'react-twitter-embed';
 
 function Widgets() {
     return (
@@ -12,17 +12,12 @@ function Widgets() {
             </div>
             <div className="widgets__widgetContainer">
                 <h2>What's Happening</h2>
-                <TwitterTweetEmbed tweetId={"858551177860055040"} />
+                <TwitterTweetEmbed tweetId={"1341451483993260034"} />
 
                 <TwitterTimelineEmbed
                     sourceType="profile"
-                    screenName="cleverqazi"
+                    screenName="BreakingNews"
                     options={{ height: 400 }} />
-
-                <TwitterShareButton
-                    url={"https://facebook.com/cleverprogrammer"}
-                    options={{ text: "#reactjs is awesome", via: "cleverqazi" }}
-                />
 
             </div>
         </div>

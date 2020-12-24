@@ -13,31 +13,33 @@ function Post({
     verified,
     text,
     image,
-    avatar
+    avatar,
+    postTime
 }) {
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/263F418F2C47943D98B2877ECAD174927FBBD359C4AFB45BE0C6A22AD589D22E/scale?width=400&amp;aspectRatio=1&amp;format=png" />
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Daksh Jain {" "}
+                            {displayName} {" "}
                             <span className="post__headerSpecial">
-                                <VerifiedUserIcon className="post__badge" />
-                            @djain100
+                                {verified && <VerifiedUserIcon className="post__badge" />}
+                            @{username} • {postTime.toDate().toLocaleString().split(',')[0]}
                             </span>
                         </h3>
                     </div>
                     <div className="post_headerDescription">
-                        <p>It’s unconscionable that there are families worried over the holidays that they’ll be evicted next month. Extending the eviction moratorium was a start, but Congress has to do more to help folks who can’t pay rent because of COVID-related unemployment.</p>
+                        <p>{text}</p>
                     </div>
                 </div>
                 <img
-                    src="https://variety.com/wp-content/uploads/2020/07/huc-ff-000185.jpg?resize=681,383"
-                    alt="" />
+                    src={image}
+                    alt=""
+                />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
