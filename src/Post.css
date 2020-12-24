@@ -47,3 +47,7 @@
 .post__avatar {
     padding: 15px;
 }
+
+.post__body>img[src=""] {
+    display: none;
+}
